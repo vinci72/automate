@@ -15,7 +15,7 @@ PKURL=https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
 # PRE CHECKS
 #
 
-#Check if we hav arguments
+#Check arguments
 if [ $# -eq 0 ]
   then
     echo "Arguments expected"
