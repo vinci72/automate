@@ -3,9 +3,17 @@
 #v 0.1beta
 #jarek.z@outlook.com
 
+#
+# CUSTOMIZATION
+#
+
 #Set URL with your ssh public key URL
 #Downloaded file with key must be named: authorized_keys
 PKURL=https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
+
+#
+# PRE CHECKS
+#
 
 #Check if we hav arguments
 if [ $# -eq 0 ]
@@ -14,6 +22,10 @@ if [ $# -eq 0 ]
     eche " Usage: customize_install.sh username"
     exit 1
 fi
+
+#
+# STEP 1
+#
 
 #Do System Update
 apt update -y
@@ -40,7 +52,7 @@ apt install veeam -y
 ufw allow ssh
 ufw default deny incoming
 ufw default allow outgoing
-ufw enable
+ufw enable --force
 
 #Disable Password SSH Logins
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
@@ -48,5 +60,5 @@ sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin prohibit-password/g
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 service sshd restart
 
-#Get step2.sh script
+#STEP 2
 #To be continued ...
