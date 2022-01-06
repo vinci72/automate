@@ -52,7 +52,7 @@ apt install veeam -y
 ufw allow ssh
 ufw default deny incoming
 ufw default allow outgoing
-ufw enable --force
+echo "y" | ufw enable
 
 #Disable Password SSH Logins
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
