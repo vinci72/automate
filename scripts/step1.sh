@@ -20,3 +20,18 @@ wget https://github.com/vinci72/ssh/raw/main/veeam-release-deb_1.0.8_amd64.deb
 
 dpkg -i ./veeam-release* && apt-get update
 apt install veeam -y
+
+#Firewall with SSH allow
+ufw allow ssh
+ufw default deny incoming
+ufw default allow outgoing
+ufw enable
+
+#Disable Password SSH Logins
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin prohibit-password/g' /etc/ssh/sshd_config
+sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
+service sshd restart
+
+#Get step2.sh script
+
