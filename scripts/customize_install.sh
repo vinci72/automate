@@ -19,7 +19,7 @@ PKURL=https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
 if [ $# -eq 0 ]
   then
     echo "Arguments expected"
-    eche " Usage: customize_install.sh username"
+    echo "Usage: customize_install.sh username"
     exit 1
 fi
 
