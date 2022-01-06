@@ -11,9 +11,9 @@ Default actions:
 - Modify ssh deamon to disallow password logins
 
 Usage:
-Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
-Login to your account
-su -
-wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/customize_install.sh
-!!! Customize script Line containingURL with private ssh key !!!!
-bash ./customize_install.sh jzawadzki
+1. Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
+2. Login to your account
+3. su -
+4. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/customize_install.sh
+5. !!! Customize script Line containingURL with private ssh key !!!!
+6. bash ./customize_install.sh jzawadzki
