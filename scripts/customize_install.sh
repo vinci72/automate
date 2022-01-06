@@ -1,9 +1,17 @@
 #!/bin/bash
 
+#v 0.1beta
+#jarek.z@outlook.com
+
+#Set URL with your ssh public key URL
+#Downloaded file with key must be named: authorized_keys
+PKURL=https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
+
 #Check if we hav arguments
 if [ $# -eq 0 ]
   then
     echo "Arguments expected"
+    eche " Usage: customize_install.sh username"
     exit 1
 fi
 
@@ -17,7 +25,7 @@ apt install mc open-vm-tools net-tools iptraf-ng cifs-utils genisoimage squashfs
 #SSH Public Key
 mkdir /home/"$1"/.ssh
 cd /home/"$1"/.ssh
-wget https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
+wget $PKURL
 cd ..
 chown "$1":"$1" /home/"$1"/.ssh /home/"$1"/.ssh/authorized_keys
 
@@ -41,4 +49,4 @@ sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd
 service sshd restart
 
 #Get step2.sh script
-
+#To be continued ...
