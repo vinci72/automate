@@ -1,5 +1,12 @@
 #!/bin/bash
 
+#Check if we hav arguments
+if [ $# -eq 0 ]
+  then
+    echo "Arguments expected"
+    exit 1
+fi
+
 #Do System Update
 apt update -y
 apt upgrade -y 
@@ -8,11 +15,11 @@ apt upgrade -y
 apt install mc open-vm-tools net-tools iptraf-ng cifs-utils genisoimage squashfs-tools xorriso ufw curl wget -y
 
 #SSH Public Key
-mkdir /home/jzawadzki/.ssh
-cd /home/jzawadzki/.ssh
+mkdir /home/"$1"/.ssh
+cd /home/"$1"/.ssh
 wget https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
 cd ..
-chown jzawadzki:jzawadzki /home/jzawadzki/.ssh /home/jzawadzki/.ssh/authorized_keys
+chown "$1":"$1" /home/"$1"/.ssh /home/"$1"/.ssh/authorized_keys
 
 #VEEAM AGENT FREE Instalation
 cd /root
