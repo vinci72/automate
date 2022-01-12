@@ -9,6 +9,7 @@ Default actions:
 - Install ssh key for specified user (argument No.1)
 - Install Firewall (UFW) and allow only ssh connection
 - Modify ssh deamon to disallow password logins
+- Install tomcat9 default instance (8080) and
 
 Usage:
 1. Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
@@ -17,3 +18,7 @@ Usage:
 4. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/customize_install.sh
 5. !!! Change script Line containing URL with public ssh key !!!!
 6. bash ./customize_install.sh username
+7. TOMCAT 9
+8. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/install_tomcat.sh
+9. !!! Change tomcat admin username and password. Adjust JAVA MAX memory (default 4GB) !!!
+10. bash ./install_tomcat.sh
