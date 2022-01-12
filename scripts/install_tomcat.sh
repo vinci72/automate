@@ -14,4 +14,6 @@ echo "JAVA_OPTS="${JAVA_OPTS} -Xms1024m -Xmx4196m -XX:MaxPermSize=512m"" >> /etc
 
 sed -i '/<*tomcat-users>/i <user username="tajniak" password="tajnehaslo" roles="admin,manager,manager-gui,manager-script,admin-gui"/>' /srv/tomcat/conf/tomcat-users.xml
 
+ufw allow 8080/tcp
+
 service tomcat9 restart
