@@ -15,5 +15,5 @@ Usage:
 2. Login to your account
 3. su -
 4. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/customize_install.sh
-5. !!! Customize script Line containingURL with private ssh key !!!!
-6. bash ./customize_install.sh jzawadzki
+5. !!! Change script Line containing URL with public ssh key !!!!
+6. bash ./customize_install.sh username
