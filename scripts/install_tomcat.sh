@@ -5,7 +5,7 @@
 #
 ADMIN="tajniak"
 PASS="tajnehaslo"
-JAVA=4196
+MAXMEM=4196
 # END VARIABLES
 
 #Do System Update
@@ -18,7 +18,7 @@ cd /srv
 ln -s /var/lib/tomcat9/ tomcat
 
 echo "# Ustawienie pamieci JAVA" >> /etc/default/tomcat9
-echo "JAVA_OPTS=\"\${JAVA_OPTS} -Xms1024m -Xmx$JAVAm -XX:MaxPermSize=512m\"" >> /etc/default/tomcat9
+echo "JAVA_OPTS=\"\${JAVA_OPTS} -Xms1024m -Xmx$MAXMEMm -XX:MaxPermSize=512m\"" >> /etc/default/tomcat9
 
 sed -i '/<*tomcat-users>/i <user username=\"$ADMIN\" password=\"$PASS\" roles="admin,manager,manager-gui,manager-script,admin-gui"/>' /srv/tomcat/conf/tomcat-users.xml
 
