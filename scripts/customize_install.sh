@@ -61,4 +61,9 @@ sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd
 service sshd restart
 
 #STEP 2
-#To be continued ...
+# Not needed but usefull
+# comment if not to be executed
+
+#sudoers without password
+sed -i "/# Allow members of group sudo to execute any command/a %$1 ALL=(ALL) NOPASSWD:ALL" /etc/sudoers
+
