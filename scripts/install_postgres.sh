@@ -35,6 +35,12 @@ nano /etc/postgresql/11/radix/pg_hba.conf
 # nano /etc/default/autopostgresqlbackup
 cp /etc/default/autopostgresqlbackup /etc/default/autopostgresqlbackup.backup
 # sed -i 's/BACKUPDIR="/var/lib/autopostgresqlbackup"/BACKUPDIR="/backup"/g' /etc/default/autopostgresqlbackup
+
+# nano /etc/postgresql/11/radix/postgresql.conf
+cp nano /etc/postgresql/11/radix/postgresql.conf nano /etc/postgresql/11/radix/postgresql.conf.backup
+
+nano /etc/postgresql/11/radix/pg_hba.conf
+nano /etc/postgresql/11/radix/postgresql.conf
 nano /etc/default/autopostgresqlbackup
 
 # Change postgres password
