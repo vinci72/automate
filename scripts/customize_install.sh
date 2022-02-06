@@ -9,7 +9,7 @@
 
 #Set URL with your ssh public key URL
 #Downloaded file with key must be named: authorized_keys
-PKURL=https://raw.githubusercontent.com/vinci72/ssh/main/authorized_keys
+PKURL=https://raw.githubusercontent.com/vinci72/automate/main/authorized_keys
 
 #
 # PRE CHECKS
@@ -43,7 +43,7 @@ chown "$1":"$1" /home/"$1"/.ssh /home/"$1"/.ssh/authorized_keys
 
 #VEEAM AGENT FREE Instalation
 cd /root
-wget https://github.com/vinci72/ssh/raw/main/veeam-release-deb_1.0.8_amd64.deb
+wget https://github.com/vinci72/automate/raw/main/veeam-release-deb_1.0.8_amd64.deb
 
 dpkg -i ./veeam-release* && apt-get update
 apt install veeam -y
