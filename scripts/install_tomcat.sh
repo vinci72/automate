@@ -22,10 +22,10 @@ mkdir /srv/tomcat9-8080/radix
 mkdir /srv/tomcat9-8080/radix-temp
 mkdir /srv/tomcat9-8080/radix-szablony
 
-wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arial.TTF
-wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arialbd.TTF
-wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arialbi.TTF
-wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Ariali.TTF
+wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arial.TTF
+wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arialbd.TTF
+wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arialbi.TTF
+wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Ariali.TTF
 
 mv -v *.TTF /usr/share/fonts
 fc-cache -f -v
