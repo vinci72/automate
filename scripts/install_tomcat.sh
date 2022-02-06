@@ -4,7 +4,7 @@
 apt update -y
 apt update -y 
 
-apt install tomcat9 tomcat9-admin tomcat9-user -y
+apt install tomcat9 tomcat9-admin tomcat9-user fontconfig -y
 
 cd /srv
 ln -s /var/lib/tomcat9/ tomcat9-8080
@@ -21,6 +21,15 @@ echo "RADIX folders"
 mkdir /srv/tomcat9-8080/radix
 mkdir /srv/tomcat9-8080/radix-temp
 mkdir /srv/tomcat9-8080/radix-szablony
+
+wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arial.TTF
+wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arialbd.TTF
+wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Arialbi.TTF
+wget https://raw.githubusercontent.com/vinci72/ssh/main/ttf/Ariali.TTF
+
+mv -v *.TTF /usr/share/fonts
+fc-cache -f -v
+fc-match Arial
 
 echo "Restarting Tomcat service ... "
 service tomcat9 restart
