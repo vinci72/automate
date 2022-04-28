@@ -30,7 +30,7 @@ ufw allow 5432/tcp
 # nano /etc/postgresql/11/radix/pg_hba.conf
 cp /etc/postgresql/11/radix/pg_hba.conf /etc/postgresql/11/radix/pg_hba.conf.backup
 # sed -i "/host    all             all             127.0.0.1/32            md5/a host    all             all             192.168.1.0/24          md5" /etc/postgresql/11/radix/pg_hba.conf
-nano /etc/postgresql/11/radix/pg_hba.conf
+# nano /etc/postgresql/11/radix/pg_hba.conf
 
 # nano /etc/default/autopostgresqlbackup
 cp /etc/default/autopostgresqlbackup /etc/default/autopostgresqlbackup.backup
