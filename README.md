@@ -12,14 +12,21 @@ Default actions:
 - Install tomcat9 default instance (8080) and
 
 Usage:
-1. Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
-2. Login to your account
-3. su -
-4. wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install.sh
-5. !!! Change script Line containing URL with public ssh key !!!!
-6. bash ./customize_install.sh username
-7. TOMCAT 9
-8. wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/install_tomcat.sh
-9. nano ./install_tomcat.sh
-10. !!! Change tomcat admin username and password. Adjust JAVA MAX memory (default 4GB) !!!
-11. bash ./install_tomcat.sh
+Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
+Login to your account
+su -
+
+== BASIC TOOLS ==
+wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install.sh
+!!! Change script Line containing URL with public ssh key !!!!
+bash ./customize_install.sh username
+
+== TOMCAT 9 ==
+wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/install_tomcat.sh
+nano ./install_tomcat.sh
+!!! Change tomcat admin username and password. Adjust JAVA MAX memory (default 4GB) !!!
+bash ./install_tomcat.sh
+
+== GRAYLOG Sidecars (Linux) ==
+wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/graylog_linux_client.sh
+bash ./graylog_linux_client.sh
