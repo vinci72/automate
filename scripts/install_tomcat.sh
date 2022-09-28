@@ -18,10 +18,15 @@ echo "updating UFW ... "
 ufw allow 8080/tcp
 
 echo "RADIX folders"
-mkdir /srv/tomcat9-8080/radix
-mkdir /srv/tomcat9-8080/radix-temp
-mkdir /srv/tomcat9-8080/radix-szablony
+mkdir /srv/tomcat9-8080/webapps/radix-lic
+mkdir /srv/tomcat9-8080/webapps/radix-temp
+mkdir /srv/tomcat9-8080/webapps/radix-szablony
 
+# chown
+
+# mod radix webinf
+
+# ttf
 wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arial.TTF
 wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arialbd.TTF
 wget https://raw.githubusercontent.com/vinci72/automate/main/ttf/Arialbi.TTF
@@ -31,5 +36,6 @@ mv -v *.TTF /usr/share/fonts
 fc-cache -f -v
 fc-match Arial
 
+#restart
 echo "Restarting Tomcat service ... "
 service tomcat9 restart

@@ -15,10 +15,11 @@ Usage:
 1. Do Clean install (netinstall) of Debian 10 (curently tested only on 10.10) - No GUI, only ssh and main system
 2. Login to your account
 3. su -
-4. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/customize_install.sh
+4. wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install.sh
 5. !!! Change script Line containing URL with public ssh key !!!!
 6. bash ./customize_install.sh username
 7. TOMCAT 9
-8. wget https://raw.githubusercontent.com/vinci72/ssh/main/scripts/install_tomcat.sh
-9. !!! Change tomcat admin username and password. Adjust JAVA MAX memory (default 4GB) !!!
-10. bash ./install_tomcat.sh
+8. wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/install_tomcat.sh
+9. nano ./install_tomcat.sh
+10. !!! Change tomcat admin username and password. Adjust JAVA MAX memory (default 4GB) !!!
+11. bash ./install_tomcat.sh
