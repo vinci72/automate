@@ -67,3 +67,5 @@ service sshd restart
 #sudoers without password
 sed -i "/# Allow members of group sudo to execute any command/a %$1 ALL=(ALL) NOPASSWD:ALL" /etc/sudoers
 
+# add veeam last backup status file
+crontab -l | { cat; echo "0 23 * * * veeamconfig session list --24 | sed -e '1d;3d' > /var/log/kopiaveeam.log"; } | crontab -
