@@ -10,4 +10,8 @@ dpkg -i graylog-sidecar_1.2.0-1_amd64.deb
 graylog-sidecar -service install
 nano /etc/graylog/sidecar/sidecar.yml
 systemctl start graylog-sidecar.service
+apt install filebeat
+systemctl enable filebeat.service
+service filebeat start
 systemctl status graylog-sidecar.service
+service filebeat status
