@@ -33,4 +33,4 @@ bash ./graylog_linux_client.sh
   
 == Zabbix2-agent (Linux) ==  
 wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/zabbix2.sh  
-bash ./zabbix2.sh  
+bash ./zabbix2.sh  ZABBIX_SERVER_IP
