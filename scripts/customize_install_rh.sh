@@ -46,7 +46,8 @@ chown "$1":"$1" /home/"$1"/.ssh /home/"$1"/.ssh/authorized_keys
 # wget https://github.com/vinci72/automate/raw/main/veeam-release-deb_1.0.8_amd64.deb
 # dpkg -i ./veeam-release* && apt-get update
 # apt install veeam -y
-yum -Uvh https://github.com/vinci72/automate/raw/main/veeam-release-el7-1.0.8-1.x86_64.rpm
+rpm -ivh https://github.com/vinci72/automate/raw/main/veeam-release-el7-1.0.8-1.x86_64.rpm
+yum install veeam -y
 
 #Disable Password SSH Logins
 cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
