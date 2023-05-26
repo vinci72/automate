@@ -17,7 +17,8 @@ Login to your account
 su -  
 
 == BASIC TOOLS ==  
-wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install.sh  
+Deb:    wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install.sh  
+RH:     wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_install_rh.sh  
 !!! Change script Line containing URL with public ssh key !!!!  
 bash ./customize_install.sh username  
 
