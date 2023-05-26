@@ -29,6 +29,7 @@ cp /etc/zabbix/zabbix_agent2.conf /etc/zabbix/zabbix_agent2.conf.bak
 sed -i 's/Server=127.0.0.1/Server=%$1/g' /etc/zabbix/zabbix_agent2.conf
 # ServerActive
 sed -i 's/ServerActive=127.0.0.1/Server=%$1/g' /etc/zabbix/zabbix_agent2.conf
+#
 
 #
 # nano /etc/zabbix/zabbix_agent2.conf
