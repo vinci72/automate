@@ -37,5 +37,5 @@ wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/zabbix2.sh
 bash ./zabbix2.sh  ZABBIX_SERVER_IP
 
 == Only SSH ===
-wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize.sh
-bash customize.sh username
+wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize.sh  
+bash customize.sh username  
