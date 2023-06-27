@@ -34,8 +34,12 @@ bash ./graylog_linux_client.sh
   
 == Zabbix2-agent (Linux) ==  
 wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/zabbix2.sh  
-bash ./zabbix2.sh  ZABBIX_SERVER_IP
+bash ./zabbix2.sh  ZABBIX_SERVER_IP  
 
-== Only SSH ===
+== Only SSH ===  
 wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize.sh  
 bash customize.sh username  
+
+== Add Veeam ===  
+wget https://raw.githubusercontent.com/vinci72/automate/main/scripts/customize_veeam.sh  
+bash customize_veeam.sh  
