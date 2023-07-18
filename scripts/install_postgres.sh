@@ -10,12 +10,12 @@
 # Install packages
 apt update -y
 apt upgrade -y
-apt install postgresql-11 postgresql-client-11 autopostgresqlbackup p7zip -y
+apt install postgresql-13 postgresql-client-13 autopostgresqlbackup p7zip -y
 
 # Configure instance
-pg_dropcluster 11 main --stop
-pg_createcluster -d /srv/radix -p 5432 11 radix
-pg_ctlcluster 11 radix start
+pg_dropcluster 13 main --stop
+pg_createcluster -d /srv/radix -p 5432 13 radix
+pg_ctlcluster 13 radix start
 
 # Add Crontab Job
 crontab -l > cron.kopia
@@ -27,8 +27,8 @@ rm cron.kopia
 ufw allow 5432/tcp
 
 # Edit conf files
-# nano /etc/postgresql/11/radix/pg_hba.conf
-cp /etc/postgresql/11/radix/pg_hba.conf /etc/postgresql/11/radix/pg_hba.conf.backup
+# nano /etc/postgresql/13/radix/pg_hba.conf
+cp /etc/postgresql/13/radix/pg_hba.conf /etc/postgresql/13/radix/pg_hba.conf.backup
 # sed -i "/host    all             all             127.0.0.1/32            md5/a host    all             all             192.168.1.0/24          md5" /etc/postgresql/11/radix/pg_hba.conf
 # nano /etc/postgresql/11/radix/pg_hba.conf
 
@@ -37,10 +37,10 @@ cp /etc/default/autopostgresqlbackup /etc/default/autopostgresqlbackup.backup
 # sed -i 's/BACKUPDIR="/var/lib/autopostgresqlbackup"/BACKUPDIR="/backup"/g' /etc/default/autopostgresqlbackup
 
 # nano /etc/postgresql/11/radix/postgresql.conf
-cp nano /etc/postgresql/11/radix/postgresql.conf nano /etc/postgresql/11/radix/postgresql.conf.backup
+cp nano /etc/postgresql/13/radix/postgresql.conf nano /etc/postgresql/13/radix/postgresql.conf.backup
 
-nano /etc/postgresql/11/radix/pg_hba.conf
-nano /etc/postgresql/11/radix/postgresql.conf
+nano /etc/postgresql/13/radix/pg_hba.conf
+nano /etc/postgresql/13/radix/postgresql.conf
 nano /etc/default/autopostgresqlbackup
 
 # Change postgres password
